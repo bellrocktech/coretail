@@ -1,0 +1,2 @@
+# coretail
+CoreDNS with Tailscale
