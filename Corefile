@@ -1,0 +1,5 @@
+. {
+    forward . 1.1.1.1
+    alternate NXDOMAIN . 100.100.100.100:53
+    log
+}
