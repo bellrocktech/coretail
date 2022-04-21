@@ -6,6 +6,7 @@ RUN apk add git make && \
     git clone --depth 1 --branch=v1.9.1 https://github.com/coredns/coredns /go/src/coredns && cd plugin && \
     git clone https://github.com/coredns/alternate && \
     sed -i s/forward:forward/alternate:github.com\\/coredns\\/alternate\\nforward:forward/ /go/src/coredns/plugin.cfg && \
+    cat /go/src/coredns/plugin.cfg && \
     cd .. && \
     make check && \
     go install
