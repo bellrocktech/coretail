@@ -1,4 +1,4 @@
-FROM golang:1.18-alpine AS build
+FROM golang:1.19-alpine AS build
 
 WORKDIR /go/src/coredns
 
@@ -11,9 +11,9 @@ RUN apk add git make && \
     make check && \
     go install
 
-FROM ghcr.io/tailscale/tailscale:v1.22 AS tailscale
+FROM ghcr.io/tailscale/tailscale:v1.34 AS tailscale
 
-FROM alpine:3.15
+FROM alpine:3.17
 RUN apk add --no-cache ca-certificates iptables iproute2 ip6tables
 
 COPY --from=tailscale /usr/local/bin/tailscale /usr/local/bin/
