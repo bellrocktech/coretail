@@ -11,7 +11,7 @@ RUN apk add git make && \
     make check && \
     go install
 
-FROM ghcr.io/tailscale/tailscale:v1.34 AS tailscale
+FROM ghcr.io/tailscale/tailscale:v1.34.2 AS tailscale
 
 FROM alpine:3.17
 RUN apk add --no-cache ca-certificates iptables iproute2 ip6tables
