@@ -1,5 +1,13 @@
 . {
+    errors
+    health
+    ready
+    prometheus :9153
     forward . 1.1.1.1
     alternate NXDOMAIN,NOERROR . 100.100.100.100:53
+    cache 30
+    loop
+    reload
+    loadbalance
     log
 }
