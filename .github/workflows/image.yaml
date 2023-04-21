@@ -6,6 +6,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
+  VERSION: v0.0.1
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
