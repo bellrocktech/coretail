@@ -2,7 +2,7 @@ name: container image
 
 on:
   push:
-    branches: ['main']
+    branches: ['*']
 
 env:
   REGISTRY: ghcr.io
