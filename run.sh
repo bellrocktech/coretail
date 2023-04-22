@@ -38,7 +38,7 @@ PIDS=""
 containerboot &
 PIDS="$PIDS $!"
 
-coredns -conf /Corefile &
+coredns -conf /etc/coretail/Corefile &
 PIDS="$PIDS $!"
 
 for pid in $PIDS; do
